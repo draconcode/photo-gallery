@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <form action="/images/add" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="text" name="title" class="form-control" placeholder="Título de imagen"
+                            autocomplete="false">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="description" rows="2" placeholder="Descripción de imagen"
+                            autocomplete="false"></textarea>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="file" name="image" class="custom-file-input" id="inputGroupFile01">
+                        <label for="inputGroupFile01" class="custom-file-label">
+                            Escoge una imagen
+                        </label>
+                    </div>
+                    <button class="btn btn-primary">
+                        Subir imagen
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each photos}}
+                <tr>
+                    <td class="mpointer">
+                        <a href="{{imageURL}}" target="_blank">
+                            <img width="60" height="65" class="rounded-circle" src="{{imageURL}}" alt="">
+                        </a>
+                    </td>
+                    <td>{{title}}</td>
+                    <td>{{description}}</td>
+                    <td>
+                        <a href="/images/delete/{{_id}}" class="btn btn-danger">
+                            Borrar</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
