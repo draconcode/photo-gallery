@@ -25,6 +25,7 @@
         </div>
     </div>
     <div class="col-md-8">
+        {{#if photos}}
         <table class="table">
             <thead>
                 <tr>
@@ -52,5 +53,17 @@
                 {{/each}}
             </tbody>
         </table>
+        {{else}}
+        <div class="my-5">
+            <div class="row text-muted text-center">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body p-5">
+                            No hay im&aacute;genes agregadas
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/if}}
     </div>
-</div>

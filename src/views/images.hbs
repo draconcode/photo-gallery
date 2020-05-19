@@ -10,6 +10,7 @@
 
     .swiper-container {
         width: 100%;
+        height: 80vh;
         padding-top: 50px;
         padding-bottom: 50px;
     }
@@ -22,6 +23,7 @@
     }
 </style>
 
+{{#if photos}}
 <!-- Swiper -->
 <div class="swiper-container">
     <div class="swiper-wrapper">
@@ -33,3 +35,23 @@
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
 </div>
+{{else}}
+<div class="container">
+    <div class="row text-muted text-center">
+        <div class="d-none d-md-block col-md-10 offset-md-1">
+            <div class="card">
+                <div class="card-body m-5">
+                    No hay im&aacute;genes agregadas
+                </div>
+            </div>
+        </div>
+        <div class="d-block d-md-none col-12">
+            <div class="card">
+                <div class="card-body p-5">
+                    No hay im&aacute;genes agregadas
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}
