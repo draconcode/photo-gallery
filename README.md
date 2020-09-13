@@ -1,3 +1,6 @@
+
+# photo-gallery
+
 Instalar paquetes: 
 
 `npm install`
@@ -12,6 +15,6 @@ Agregar variables de entorno:
 
 `CLOUDINARY_API_SECRET`
 
-corre la aplicacion: 
+Inicia la aplicacion en desarrollo: 
 
 `npm run dev`
