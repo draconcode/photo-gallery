@@ -7,7 +7,7 @@
 ## Instalar paquetes: 
 
 ~~~
-`npm install`
+npm install
 ~~~
 
 ## Agregar variables de entorno:
@@ -23,11 +23,11 @@
 ## Inicia la aplicacion en desarrollo: 
 
 ~~~
-`npm run dev`
+npm run dev
 ~~~
 
 ## Inicia la aplicacion en producción: 
 
 ~~~
-`npm start`
+npm start
 ~~~
